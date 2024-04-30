@@ -1,0 +1,21 @@
+<h1>Bonjour world</h1>
+
+<h2 [ngStyle]="{'font-family': helloForm.value.police, 'text-align': helloForm.value.align}">Bonjour {{helloForm.value.name| uppercase}} !</h2>
+
+<div>
+    <form name="myForm" [formGroup]="helloForm" >
+        <label for="name">Name: </label>
+        <input id="name" placeholder="name" formControlName="name"><br/>
+
+        <label for="polices">Police: </label>
+        <select id="polices" formControlName="police">
+            <option [ngValue]="police" *ngFor="let police of polices" >
+                {{police}}</option>
+        </select> <br/>
+        <label><input type="radio" checked formControlName="align" value="left"/>Left</label>
+        <label><input type="radio" formControlName="align" value="center"/>Center</label>
+        <label><input type="radio" formControlName="align" value="right"/>Right</label>
+    </form>
+</div>
+
+<!--  -->

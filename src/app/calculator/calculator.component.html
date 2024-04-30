@@ -1,0 +1,22 @@
+<h1>Calculator</h1>
+<div>
+    <form [formGroup]="calculForm" (submit)="submitCalcul()">
+        <label for="operand1"></label>
+        <input id="operand1" type="text" placeholder="0" formControlName="operand1" >
+
+        <label for="operator"></label>
+        <select id="operator" formControlName="operator">
+            <option [ngValue]="operator" *ngFor="let operator of operatorList" value="operator">
+                {{operator}}</option>
+        </select>
+
+        <label for="operand2"></label>
+        <input id="operand2" type="text" placeholder="0" formControlName="operand2"><br>
+
+        <button type="submit" class="primary">Calcul now</button>
+    </form>
+
+    {{result}}
+</div>
+
+<app-messages></app-messages>
