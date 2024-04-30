@@ -7,3 +7,7 @@ table, th, td {
     text-decoration: none;
     color: black;
   }
+
+  th {
+    text-decoration: underline;
+  }

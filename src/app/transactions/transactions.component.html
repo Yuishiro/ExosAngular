@@ -1,11 +1,12 @@
 <h1>Transactions</h1>
+<p>Click on headers to sort the table</p>
 <table>
     <tr>
-        <th>id</th>
-        <th>amount</th>
-        <th>balance</th>
-        <th>label</th>
-        <th>date</th>
+        <th (click)="sort('id')">id</th>
+        <th (click)="sort('amount')">amount</th>
+        <th (click)="sort('balance')">balance</th>
+        <th (click)="sort('label')">label</th>
+        <th (click)="sort('date')">date</th>
     </tr>
     <tbody>
         <tr *ngFor="let transaction of transactions">

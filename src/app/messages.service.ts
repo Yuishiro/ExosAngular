@@ -17,4 +17,8 @@ export class MessagesService {
     this.messages = [];
   }
 
+  delete(message: string) {
+    this.messages = this.messages.filter((obj) => {return obj != message});
+  }
+
 }

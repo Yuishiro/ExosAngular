@@ -12,6 +12,7 @@ export class BonjourComponent {
   helloForm = new FormGroup({
     name: new FormControl(''),
     police: new FormControl(this.polices[0]),
-    align: new FormControl('left')
+    align: new FormControl('left'),
+    size: new FormControl('16px')
   });
 }

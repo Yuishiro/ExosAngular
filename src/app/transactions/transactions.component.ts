@@ -16,4 +16,8 @@ export class TransactionsComponent implements OnInit{
         this.transactions = response;
       })
   }
+
+  sort(colName: string) {
+    this.transactions = this.transactions.sort((a : any, b : any) => a[colName] > b[colName] ? 1 : a[colName] < b[colName] ? -1 : 0);
+  }
 }
